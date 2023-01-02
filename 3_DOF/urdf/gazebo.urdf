@@ -1,0 +1,264 @@
+<?xml version="1.0"?>
+<robot name ="3_DOF">
+    <link name="world"/>
+
+    <link name="base_link">
+        <inertial>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <mass value="5.0"/>
+            <inertia ixx="0.0135" ixy="0.0" ixz="0.0" iyy="0.0135" iyz="0.0" izz="0.05"/>
+        </inertial>
+        <visual name="">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <cylinder radius="0.2" length="0.05"/>
+            </geometry>
+            <material name="green1">
+                <color rgba="0.07 0.56 0.34 1.0"/>
+                <texture filename=""/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <cylinder radius="0.2" length="0.05"/>
+            </geometry> 
+        </collision>
+    </link>
+
+    <link name="link_1">
+        <inertial>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <mass value="5.0"/>
+            <inertia ixx="0.107" ixy="0.0" ixz="0.0" iyy="0.107" iyz="0.0" izz="0.0125"/>
+        </inertial>
+        <visual name="">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <cylinder radius="0.08" length="0.5"/>
+            </geometry>
+            <material name="blue1">
+                <color rgba="0.04 0.67 0.87 1.0"/>
+                <texture filename=""/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <cylinder radius="0.08" length="0.5"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="link_2">
+        <inertial>
+            <origin xyz="0.0 0.0 0.0" rpy="1.5707 0.0 0.0"/>
+            <mass value="0.2"/>
+            <inertia ixx="0.027" ixy="0.0" ixz="0.0" iyy="0.027" iyz="0.0" izz="0.0025"/>
+        </inertial>
+        <visual name="">
+            <origin xyz="0.0 0.0 0.0" rpy="1.5707 0.0 0.0"/>
+            <geometry>
+                <cylinder radius="0.08" length="0.1"/>
+            </geometry>
+            <material name="green2">
+                <color rgba="0.11 0.43 0.29 1.0"/>
+                <texture filename=""/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0.0 0.0 0.0" rpy="1.5707 0.0 0.0"/>
+            <geometry>
+                <cylinder radius="0.08" length="0.1"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="link_3">
+        <inertial>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <mass value="0.01"/>
+            <inertia ixx="0.027" ixy="0.0" ixz="0.0" iyy="0.027" iyz="0.0" izz="0.0025"/>
+        </inertial>
+        <visual name="">
+            <origin xyz="0.0 0.0 0.04" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <cylinder radius="0.05" length="0.4"/>
+            </geometry>
+            <material name="blue2">
+                <color rgba="0.01 0.19 1.0 1.0"/>
+                <texture filename=""/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0.0 0.0 0.04" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <cylinder radius="0.05" length="0.4"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="link_4">
+        <inertial>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <mass value="0.01"/>
+            <inertia ixx="0.027" ixy="0.0" ixz="0.0" iyy="0.027" iyz="0.0" izz="0.0025"/>
+        </inertial>
+        <visual name="">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <cylinder radius="0.06" length="0.1"/>
+            </geometry>
+            <material name="gree3">
+                <color rgba="0.0 0.8 0.22 1.0"/>
+                <texture filename=""/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <cylinder radius="0.06" length="0.1"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="link_5">
+        <inertial>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <mass value="0.01"/>
+            <inertia ixx="0.027" ixy="0.0" ixz="0.0" iyy="0.027" iyz="0.0" izz="0.0025"/>
+        </inertial>
+        <visual name="">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <cylinder radius="0.03" length="0.3"/>
+            </geometry>
+            <material name="white1">
+                <color rgba="1.0 1.0 1.0 1.0"/>
+                <texture filename=""/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <cylinder radius="0.03" length="0.3"/>
+            </geometry>
+        </collision>
+    </link>
+
+---------------------------- Robot joints-----------------------------
+
+    <joint name="joint_1" type="fixed">
+        <origin xyz="0.0 0.0 0.025" rpy="0.0 0.0 0.0"/>
+        <parent link="world"/>
+        <child link="base_link"/>
+    </joint>
+
+    <joint name="joint_2" type="continuous">
+        <origin xyz="0.0 0.0 0.275" rpy="0.0 0.0 0.0"/>
+        <parent link="base_link"/>
+        <child link="link_1"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <dynamics damping="10" friction="1.0"/>
+    </joint>
+
+    <joint name="joint_3" type="revolute">
+        <origin xyz="0.0 0.0 0.33" rpy="0.0 0.0 0.0"/>
+        <parent link="link_1"/>
+        <child link="link_2"/>
+        <axis xyz="0.0 1.0 0.0"/>
+        <limit lower="-3.14" upper="0.32" effort="10" velocity="0.5"/>
+        <dynamics damping="10" friction="1.0"/>
+    </joint>
+
+    <joint name="joint_4" type="fixed">
+        <origin xyz="0.2 0.0 0.0" rpy="0.0 1.5707 0.0"/>
+        <parent link="link_2"/>
+        <child link="link_3"/>
+    </joint>
+
+    <joint name="joint_5" type="revolute">
+        <origin xyz="0.0 0.0 0.3" rpy="1.57 0.0 0.0"/>
+        <parent link="link_3"/>
+        <child link="link_4"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="-1.68" upper="1.72" effort="10" velocity="0.5"/>
+        <dynamics damping="10" friction="1.0"/>
+    </joint>
+
+    <joint name="joint_6" type="fixed">
+        <origin xyz="0.0 0.2 0.0" rpy="1.57 0.0 0.0"/>
+        <parent link="link_4"/>
+        <child link="link_5"/>
+    </joint>
+
+-------------------------- Robot colors ------------------------------
+
+    <gazebo reference="base_link">
+        <material>Gazebo/BlueGlow </material>
+    </gazebo>
+
+    <gazebo reference="link_1">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+
+    <gazebo reference="link_2">
+        <material>Gazebo/BlueGlow </material>
+    </gazebo>
+
+    <gazebo reference="link_3">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+
+    <gazebo reference="link_4">
+        <material>Gazebo/BlueGlow </material>
+    </gazebo>
+
+    <gazebo reference="link_5">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+
+----------------------------------------------------------------
+
+
+    <gazebo>
+        <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
+            <robot_sim_type>gazebo_ros2_control/GazeboSystem</robot_sim_type>
+            <parameters>/home/gabriel/ros2_ws/src/3_DOF/config/jtc.yaml</parameters>
+        </plugin>
+    </gazebo>
+
+
+<ros2_control name="GazeboSystem" type="system">
+    <hardware>
+        <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+    </hardware>
+
+
+    <joint name="joint_2">
+        <command_interface name="position">
+            <param name="min">-3.14</param>
+            <param name="max">3.14</param>
+        </command_interface>
+        <state_interface name="position"/>
+        <param name="initial_position">-3.14</param>  
+    </joint>
+    <joint name="joint_3">
+        <command_interface name="position">
+            <param name="min">-3.14</param>
+            <param name="max">0.32</param>
+        </command_interface>
+        <state_interface name="position"/>
+        <param name="initial_position">-3.14</param>  
+    </joint>
+    <joint name="joint_5">
+        <command_interface name="position">
+            <param name="min">-1.68</param>
+            <param name="max">1.72</param>
+        </command_interface>
+        <state_interface name="position"/>
+        <param name="initial_position">1.72</param>  
+    </joint>
+</ros2_control>
+
+</robot>
